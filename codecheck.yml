@@ -1,0 +1,40 @@
+---
+# CODECHECK configuration, spec: https://codecheck.org.uk/spec/config/2.0/
+version: https://codecheck.org.uk/spec/config/2.0/
+
+manifest:
+  # File names as on the certificate's Zenodo record; the paths in the
+  # codechecker's working directory are not known, so none are given.
+  - file: barplot_2026-10-23.png
+    comment: Barplot of the empty lot analysis (script 04_barplot.R), created on the codecheck run date.
+  - file: interpolation_accessibility.tif
+    comment: Interpolated raster of the accessibility (closeness centrality) for the reproduced case study area (script 03_impedance+weighting.R).
+
+paper:
+  title: "Measuring regional accessibility in urban form: A reproducible approach for urban analytics"
+  authors:
+    - name: Mathias Jehling
+      ORCID: 0000-0002-7498-3607
+    - name: Lucie Kluwe
+      ORCID: 0009-0000-3542-0230
+    - name: Caspar Kleiner
+      ORCID: 0009-0004-8810-6770
+  reference: https://doi.org/10.5194/agile-giss-7-27-2026
+
+source: https://github.com/urban-structure-and-policy/regional-accessibility
+
+codechecker:
+  - name: Frank Ostermann
+    ORCID: 0000-0002-9317-8291
+
+certificate: 2026-033
+report: https://doi.org/10.5281/zenodo.23913180
+summary: >
+  The CODECHECK successfully reproduced the outcomes for a subset of the data
+  (one of four case study areas). The workflow is fully reproducible and can be
+  used to replicate the work for different study areas.
+
+repository:
+  - https://github.com/codecheckers/regional-accessibility
+  - https://doi.org/10.5281/zenodo.19481958
+check_time: "2026-11-03"
